@@ -35,15 +35,26 @@
 <script async="" src="//www.google-analytics.com/analytics.js"></script>
 
 <style>
-h1-A {
- font-size: 200px;
- font-family: helvetica;
- color: black;
-}
-h1-A:hover {
- color: #FF3A0F;
-}
-</style>
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%;
+    background-color:white;
+  }
+  img:hover {
+    background-color: black;
+  }
+  section {
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-family:system-ui;
+    font-size: 30px;
+    color: black;
+  }
+  </style>
+
 </head>
 
 <body>
@@ -68,49 +79,36 @@ h1-A:hover {
  <div class="gcse-search"></div>
 <!--====================================Google ads search==========================================-->
 
-<div id = "wrapper">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
-  <script type="application/processing">
+<ul>
 
-    float theta;
-    float xoff = 0;
-    float yoff = 2;
-    int numFrames = 12;
-    int currentFrame = 0;
-    int value = 0;
-    
-    void setup (){
-      background (255);
-      size (window.innerWidth, window.innerHeight);
-      noiseSeed(0);
-    }
-    
-    void draw (){
-      translate (width/2, height/2);
-      rotate (theta);
-      xoff = yoff + 2;
-      float f= noise(xoff) + width;
-      float m = noise (yoff) * height;
-      rect (mouseX, 0,f, m * height);
-      line (mouseY, 0, 0, width);
-      theta += 8;
-      frameRate (60);
-       for (int i = 5; i < height; i += 5) {
-        strokeWeight (0);   // Set the color to white
-        if (i < 35) {  // When 'i' is less than 35...
-          stroke(0);   //...set the color to black
-          line(200, i, 80, i);
-        } 
-      }
-    }
-	
+<!--====================================Google text ad==========================================-->
+  <div style="margin: 30px; height: 120px;">
+  <center>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-format="fluid"
+       data-ad-layout-key="-gw-3+1f-3d+2z"
+       data-ad-client="ca-pub-5314296649303404"
+       data-ad-slot="8787873124"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
-
-	<canvas> </canvas>
-</div>
-
-</body>
+  </center>
   </div>
+<!--============================================================================================-->
+
+<section>
+  <a href="wire-nation.html">WIRE NATION</a>
+  <p>2018</p>
+</section>
+
+
+</ul>
+
+</div>
+</body>
+
 
 <div class="icon-bar">
  <a href="https://www.instagram.com/studiofru/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
