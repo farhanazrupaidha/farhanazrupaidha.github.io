@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<title>WIRE NATION | FARHANAZ RUPAIDHA</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content=text/html; charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="UndsOd9MrwydSuReKd-6pLe0vO2Z0sRfo9IE3n9D4iY" />
+<!--===============================================================================================-->
+<meta name="keywords" content="new media arts, art, digital arts, indonesia, design, sound, farhanaz rupaidha"/>
+<meta name="description" content="Lives and works in Cirebon.">
+<meta name="author" content="Farhanaz Rupaidha | Studiofru / https://farhanazrupaidha.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://farhanazrupaidha.github.io/">
+<meta property="og:image" content="https://res.cloudinary.com/studiofruworks/image/upload/v1710832241/jackplan-user/e6fmykbxfqftmylyldhg.jpg">
+<meta property="og:title" content="Farhanaz Rupaidha | Studiofru/">
+<meta property="og:description" content="Lives and works in Cirebon.">
+<!--===============================================================================================-->
+<link rel="icon" href="image/favicon.gif" type="image/gif">
+<script async="" src="//www.google-analytics.com/analytics.js"></script>
+
+<style>
+body { margin:0; }
+
+canvas {
+ 	outline: 0px;
+ 	position: relative;
+  max-width: 100%;
+  width: window.innerWidth;
+  cursor: crosshair;
+}
+  
+.footer {
+ font-size: 12px;
+ font-family: system-ui;
+ text-align: right;
+	margin-top: 5px;
+	margin-right: 10px;
+	color: black;
+	//padding: 8px;
+ }
+
+ ::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+::-webkit-scrollbar-corner {
+  background: black;
+}
+
+</style>
+
+</head>
+
+<div id = "wrapper">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+  <script type="application/processing">
+
+    float theta;
+    int value;
+    
+    void setup () {
+      background (0);
+      size (window.innerWidth, window.innerHeight);
+    }
+    
+    void draw () {
+      translate (width/2, height/1.5);
+      lights ();
+      noFill ();
+      rotate (theta);
+      
+      rotateX (mouseX + 1.0);
+      rotateY (frameCount * 2.0);
+      rotateZ (mouseY);
+      
+      stroke (value);
+      rect (70, 50, 100, 30, 20, 100, -mouseX, 50);
+      stroke (70);
+      curve (-50+mouseY, 150, -50, 300, 50, -mouseX, 100, 60);
+      
+      //translate (width/2,height/2);
+      stroke (200);
+     rect (200, mouseX, 180, 40, 20, 200, -70, 50);
+     
+     stroke (250, 8, 0);
+     ellipse (100, mouseX, -mouseX, 60);
+     
+     stroke (147, 5, 20);
+     ellipse (-mouseY, -50 + 1.0, 100, mouseX);
+     
+     stroke (44, 0 ,5);
+     box (-mouseX, - 150, 1.0 + 100);
+     
+      if (mousePressed == true) {
+        background (0);
+      }
+    }
+    
+    void mousePressed () {
+       stroke (value); 
+      color f = color (85, 2, 2);
+      color m = color (255, 10, 10);
+       if (value == m) {
+         value = f;
+          } else {
+             value = m;
+           }
+    }
+    
+    void mouseDragged () {
+     background (value); 
+      color w = color (255);
+      color q = color (237, 2, 2);
+       if (value == q) {
+         value = w;
+          } else {
+             value = q;
+           }
+    }
+	
+  </script>
+
+	<canvas> </canvas>
+</div>
+
+<input 
+  style = "
+    border: 2px rgb(0, 0, 153);
+    margin-left: 15px;
+    background: gray;
+    font-size: 12px;
+    font-family: helvetica;
+    cursor: alias;
+    color: white;" type="button" value = "Refresh" onclick="history.go(0)
+    " 
+  />
+
+<input 
+  style = "
+  border: 2px rgb(0, 0, 153);
+  margin-left: 5px;
+  background: gray;
+  font-size: 12px;
+  font-family: helvetica;
+  cursor: copy;
+  color: white;" type="button" value = "Back" onclick="window.location ='index.html';
+  " 
+/>
+
+
+<!--===============================================================================================-->
+
+</body>
+
+ <div class="footer">
+Wire Nation &copy; 2018 Farhanaz Rupaidha. All rights reserved. Bekasi, Indonesia.
+</div>
+</html>
